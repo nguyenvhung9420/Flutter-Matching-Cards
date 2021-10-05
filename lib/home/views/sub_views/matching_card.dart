@@ -26,6 +26,7 @@ class _MatchingCardState extends State<MatchingCard> {
   @override
   void initState() {
     width = (240 - (widget.index * 10)) * 1.0;
+    // width = 240;
   }
 
   @override
@@ -33,7 +34,6 @@ class _MatchingCardState extends State<MatchingCard> {
     MatchCard each = widget.each;
     int index = widget.index;
     return DraggableCard(
-      matchCard: each,
       index: index,
       onRemoveCard: () {
         widget.onRemoveCard();

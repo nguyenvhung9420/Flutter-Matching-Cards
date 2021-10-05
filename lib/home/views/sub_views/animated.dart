@@ -20,10 +20,10 @@ import 'package:flutter_matching_cards/models/match_card.dart';
 /// released.
 class DraggableCard extends StatefulWidget {
   final Widget child;
-  MatchCard matchCard;
+
   Function() onRemoveCard;
   int index;
-  DraggableCard({this.child, this.matchCard, this.onRemoveCard, this.index});
+  DraggableCard({this.child, this.onRemoveCard, this.index});
 
   @override
   _DraggableCardState createState() => _DraggableCardState();
@@ -81,7 +81,7 @@ class _DraggableCardState extends State<DraggableCard>
       child: Align(
         alignment: _dragAlignment,
         child: Container(
-          padding: EdgeInsets.only(top: widget.matchCard.margin),
+          padding: EdgeInsets.only(top: (widget.index * 40.0)),
           child: widget.child,
         ),
       ),
