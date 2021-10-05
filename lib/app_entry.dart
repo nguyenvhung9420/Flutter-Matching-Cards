@@ -1,7 +1,7 @@
 // @dart=2.9
 
 import 'package:flutter/material.dart';
-import 'package:flutter_matching_cards/bottom_tab_repository.dart';
+import 'package:flutter_matching_cards/controllers/bottom_tab_repository.dart';
 import 'package:flutter_matching_cards/home/views/home_view.dart';
 import 'package:flutter_matching_cards/saved_people/saved_people_view.dart';
 import 'package:ionicons/ionicons.dart';

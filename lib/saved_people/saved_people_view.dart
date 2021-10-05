@@ -2,12 +2,10 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_matching_cards/models/piece.dart';
-import 'package:flutter_matching_cards/repositories/people_repository.dart';
+import 'package:flutter_matching_cards/controllers/people_repository.dart';
+import 'package:flutter_matching_cards/models/person.dart';
 import 'package:flutter_matching_cards/services/people_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:sembast/sembast.dart';
-import 'package:sembast/sembast_io.dart';
 
 class SavedPeopleView extends StatefulWidget {
   SavedPeopleView({Key key}) : super(key: key);

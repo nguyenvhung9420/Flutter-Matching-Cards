@@ -4,20 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter_matching_cards/models/match_card.dart';
 
-// class PhysicsCardDragDemo extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(),
-//       body: DraggableCard(
-//         child: FlutterLogo(size: 128),
-//       ),
-//     );
-//   }
-// }
-
-/// A draggable card that moves back to [Alignment.center] when it's
-/// released.
 class DraggableCard extends StatefulWidget {
   final Widget child;
 

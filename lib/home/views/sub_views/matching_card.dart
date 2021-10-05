@@ -1,11 +1,10 @@
 //@dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_matching_cards/home/views/sub_views/animated.dart';
+import 'package:flutter_matching_cards/controllers/people_repository.dart';
+import 'package:flutter_matching_cards/home/views/sub_views/animated_draggable_card.dart';
 import 'package:flutter_matching_cards/models/match_card.dart';
-import 'package:flutter_matching_cards/models/piece.dart';
-import 'package:flutter_matching_cards/repositories/people_repository.dart';
-import 'package:flutter_matching_cards/services/people_provider.dart';
+import 'package:flutter_matching_cards/models/person.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
