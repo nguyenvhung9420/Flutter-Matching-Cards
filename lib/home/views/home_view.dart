@@ -8,6 +8,7 @@ import 'package:flutter_matching_cards/models/piece.dart';
 import 'package:flutter_matching_cards/repositories/people_repository.dart';
 import 'package:flutter_matching_cards/services/people_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -52,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // cardList = _getMatchCard(context.watch<PeopleRepository>().people);
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("Hung"),
       ),
       body: Center(
         child: Stack(alignment: Alignment.center, children: cardList),
@@ -95,16 +96,16 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  List<Widget> _getMatchCard(List<Person> cards) {
+  List<Widget> _getMatchCard(List<Person> people) {
     List<Widget> cardList = new List();
 
-    for (int i = 0; i < cards.length; i++) {
+    for (int i = 0; i < people.length; i++) {
       cardList.add(
         MatchingCard(
-            index: cards.length - i,
+            person: people[i],
+            index: people.length - i,
             onRemoveCard: () {
               _removeCard(i);
-              print("remaining cards = " + cardList.length.toString());
             }),
       );
     }
