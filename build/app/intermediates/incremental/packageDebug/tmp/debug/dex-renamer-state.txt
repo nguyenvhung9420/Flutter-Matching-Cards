@@ -1,0 +1,4 @@
+#Tue Oct 05 21:28:45 ICT 2021
+base.0=/Volumes/Data/Repos/Flutter-Matching-Cards/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

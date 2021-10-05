@@ -51,8 +51,8 @@ class _EntryScreenState extends State<EntryScreen> {
         onTap: onTapped,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.card_outline),
-            activeIcon: Icon(Ionicons.card),
+            icon: Icon(Ionicons.heart_outline),
+            activeIcon: Icon(Ionicons.heart),
             label: "Cards",
           ),
           BottomNavigationBarItem(

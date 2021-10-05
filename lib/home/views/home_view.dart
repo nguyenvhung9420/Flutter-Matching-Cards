@@ -43,55 +43,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
     context.read<PeopleRepository>().fetchPeopleFromAPI().then((values) {
       setState(() {
-        this.cardList = _getMatchCard(values);
+        cardList = _getMatchCard(values);
       });
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // cardList = _getMatchCard(context.watch<PeopleRepository>().people);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hung"),
+        title: const Text("Find yours"),
       ),
       body: Center(
         child: Stack(alignment: Alignment.center, children: cardList),
-
-        //   context.watch<PeopleRepository>().people.length > 4
-        //       ? List.generate(4, (int i) {
-        //           MatchCard each = MatchCard(255, 0, 0, 0);
-        //           return MatchingCard(
-        //               index: 4 - i,
-        //               each: each,
-        //               onRemoveCard: () {
-        //                 // _removeCard(i);
-        //                 context.read<PeopleRepository>().removeAPerson(4 - i);
-        //                 // print("remaining cards = " +
-        //                 //     context
-        //                 //         .watch<PeopleRepository>()
-        //                 //         .people
-        //                 //         .length
-        //                 //         .toString());
-        //               });
-        //         })
-        //       : [Container()],
-        // )
-
-        // FutureBuilder<void>(
-        //   future: api.fetchPeopleFromAPI(),
-        //   builder: (context, snapshot) {
-        //     if (snapshot.connectionState == ConnectionState.done) {
-        //       return Stack(
-        //         alignment: Alignment.center,
-        //         children: cardList,
-        //       );
-        //     } else if (snapshot.hasError) {
-        //       return Text("Error occurs: " + snapshot.error.toString());
-        //     } else {
-        //       return Text("Loading...");
-        //     }
-        //   },
       ),
     );
   }
